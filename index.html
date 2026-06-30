@@ -1,333 +1,813 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | JAYUSMAN</title>
 
-    <style>
-      *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    <title>JAYUSMAN | Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#0f172a;
-    color:#fff;
+
+background:
+linear-gradient(135deg,#020617,#0f172a,#1e293b);
+
+color:white;
+
+overflow-x:hidden;
+
 }
+
+/*============================*/
+
+body::before{
+
+content:'';
+
+position:fixed;
+
+width:700px;
+
+height:700px;
+
+background:#2563eb;
+
+filter:blur(250px);
+
+top:-250px;
+
+left:-250px;
+
+opacity:.35;
+
+z-index:-2;
+
+}
+
+body::after{
+
+content:'';
+
+position:fixed;
+
+width:700px;
+
+height:700px;
+
+background:#7c3aed;
+
+filter:blur(250px);
+
+bottom:-250px;
+
+right:-250px;
+
+opacity:.35;
+
+z-index:-2;
+
+}
+
+/*============================*/
 
 .container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
+
 }
 
+/*============================*/
+
 header{
-    width:100%;
-    position:fixed;
-    top:0;
-    left:0;
-    background:#111827;
-    z-index:999;
-    box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+backdrop-filter:blur(18px);
+
+background:rgba(255,255,255,.05);
+
+border-bottom:1px solid rgba(255,255,255,.1);
+
+z-index:999;
+
+transition:.4s;
+
 }
 
 header .container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 0;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 0;
+
 }
 
 .logo{
-    color:#38bdf8;
-    font-size:28px;
-    font-weight:700;
+
+font-size:30px;
+
+font-weight:800;
+
+letter-spacing:3px;
+
+color:#4cc9f0;
+
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
-}
 
-nav ul li{
-    margin-left:30px;
+display:flex;
+
+list-style:none;
+
+gap:35px;
+
 }
 
 nav ul li a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:500;
+
+transition:.4s;
+
 }
 
 nav ul li a:hover{
-    color:#38bdf8;
+
+color:#4cc9f0;
+
 }
+
+/*============================*/
 
 .hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
+
+height:100vh;
+
+display:flex;
+
+align-items:center;
+
 }
 
-.hero-content{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:50px;
+.hero .container{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:80px;
+
 }
 
 .hero-text{
-    flex:1;
+
+flex:1;
+
+animation:fadeLeft 1.2s;
+
 }
 
-.hero-text h3{
-    color:#38bdf8;
+.hero-text h4{
+
+font-size:20px;
+
+color:#4cc9f0;
+
+margin-bottom:15px;
+
 }
 
 .hero-text h1{
-    font-size:65px;
-    margin:15px 0;
+
+font-size:70px;
+
+font-weight:800;
+
+margin-bottom:20px;
+
+}
+
+.hero-text h2{
+
+font-size:30px;
+
+font-weight:600;
+
+color:#cbd5e1;
+
+margin-bottom:20px;
+
 }
 
 .hero-text p{
-    color:#d1d5db;
-    line-height:1.8;
-    margin-bottom:35px;
+
+line-height:2;
+
+font-size:17px;
+
+color:#d1d5db;
+
+margin-bottom:35px;
+
 }
 
 .btn{
-    display:inline-block;
-    background:#38bdf8;
-    color:#000;
-    padding:14px 35px;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:600;
-    transition:.3s;
+
+display:inline-block;
+
+padding:15px 40px;
+
+border-radius:50px;
+
+background:linear-gradient(45deg,#2563eb,#4cc9f0);
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+transition:.4s;
+
+box-shadow:0 0 30px rgba(76,201,240,.5);
+
 }
 
 .btn:hover{
-    transform:translateY(-5px);
+
+transform:translateY(-5px);
+
+box-shadow:0 0 50px rgba(76,201,240,.8);
+
 }
 
+/*============================*/
+
 .hero-image{
-    flex:1;
-    text-align:center;
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+animation:fadeRight 1.2s;
+
 }
 
 .hero-image img{
-    width:380px;
-    border-radius:50%;
-    border:8px solid #38bdf8;
+
+width:380px;
+
+height:380px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+padding:8px;
+
+background:linear-gradient(45deg,#4cc9f0,#2563eb,#7c3aed);
+
+box-shadow:
+
+0 0 50px #2563eb,
+
+0 0 100px #4cc9f055;
+
 }
+
+/*============================*/
 
 section{
-    padding:100px 0;
+
+padding:120px 0;
+
 }
 
-section h2{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:38px;
-    color:#38bdf8;
+.title{
+
+font-size:40px;
+
+text-align:center;
+
+margin-bottom:20px;
+
+font-weight:700;
+
 }
 
-.about p{
-    max-width:800px;
-    margin:auto;
-    text-align:center;
-    line-height:2;
-    color:#ddd;
+.subtitle{
+
+text-align:center;
+
+color:#cbd5e1;
+
+margin-bottom:60px;
+
 }
 
-.skill-box{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
+/*============================*/
+
+.glass{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border-radius:25px;
+
+padding:40px;
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.3);
+
 }
 
-.card{
-    background:#1e293b;
-    padding:35px;
-    border-radius:15px;
-    text-align:center;
-    transition:.4s;
+/*============================*/
+
+.about-content{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+align-items:center;
+
 }
 
-.card:hover{
-    transform:translateY(-10px);
-    background:#2563eb;
+.about-content p{
+
+line-height:2;
+
+color:#d1d5db;
+
 }
 
-.portfolio-box{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
+/*============================*/
+
+.timeline{
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
 }
 
-.project{
-    background:#1e293b;
-    border-radius:15px;
-    overflow:hidden;
-    transition:.3s;
+.timeline .item{
+
+display:flex;
+
+gap:20px;
+
+align-items:center;
+
+padding:20px;
+
+background:rgba(255,255,255,.05);
+
+border-radius:18px;
+
+transition:.4s;
+
 }
 
-.project img{
-    width:100%;
-    display:block;
+.timeline .item:hover{
+
+transform:translateX(15px);
+
+background:rgba(37,99,235,.2);
+
 }
 
-.project h3{
-    padding:20px;
-    text-align:center;
+.timeline .icon{
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:#2563eb;
+
+font-size:25px;
+
 }
 
-.project:hover{
-    transform:scale(1.05);
+/*============================*/
+
+.skills{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
 }
+
+.skill-card{
+
+padding:30px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.05);
+
+transition:.4s;
+
+}
+
+.skill-card:hover{
+
+transform:translateY(-10px);
+
+background:rgba(76,201,240,.15);
+
+}
+
+.bar{
+
+margin-top:20px;
+
+height:12px;
+
+background:#0f172a;
+
+border-radius:50px;
+
+overflow:hidden;
+
+}
+
+.bar span{
+
+display:block;
+
+height:100%;
+
+background:linear-gradient(90deg,#2563eb,#4cc9f0);
+
+border-radius:50px;
+
+}
+
+/*============================*/
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+transition:.4s;
+
+cursor:pointer;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+}
+
+/*============================*/
 
 .contact{
-    text-align:center;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
 }
 
-.contact p{
-    margin:15px;
+.contact .card{
+
+padding:35px;
+
+text-align:center;
+
+background:rgba(255,255,255,.05);
+
+border-radius:20px;
+
+transition:.4s;
+
 }
+
+.contact .card:hover{
+
+background:#2563eb;
+
+transform:translateY(-8px);
+
+}
+
+.contact i{
+
+font-size:35px;
+
+margin-bottom:20px;
+
+}
+
+/*============================*/
 
 footer{
-    background:#111827;
-    text-align:center;
-    padding:25px;
-    color:#bbb;
+
+padding:35px;
+
+text-align:center;
+
+background:rgba(255,255,255,.05);
+
+margin-top:100px;
+
+border-top:1px solid rgba(255,255,255,.1);
+
 }
 
-@media(max-width:768px){
+/*============================*/
 
-.hero-content{
-    flex-direction:column-reverse;
-    text-align:center;
+@keyframes fadeLeft{
+
+from{
+
+opacity:0;
+
+transform:translateX(-50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+@keyframes fadeRight{
+
+from{
+
+opacity:0;
+
+transform:translateX(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+/*============================*/
+
+@media(max-width:900px){
+
+.hero .container{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+padding-top:120px;
+
+}
+
+.about-content{
+
+grid-template-columns:1fr;
+
 }
 
 .hero-text h1{
-    font-size:45px;
+
+font-size:48px;
+
 }
 
 .hero-image img{
-    width:280px;
+
+width:280px;
+
+height:280px;
+
 }
 
-header .container{
-    flex-direction:column;
-}
+nav{
 
-nav ul{
-    margin-top:15px;
-}
+display:none;
 
-nav ul li{
-    margin:0 10px;
 }
 
 }
-    </style>
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</style>
+
 </head>
-<body>
 
+<body>
 <header>
+
     <div class="container">
-        <h2 class="logo">JAYUSMAN</h2>
+
+        <div class="logo">JAYUSMAN</div>
 
         <nav>
             <ul>
                 <li><a href="#home">Beranda</a></li>
                 <li><a href="#about">Tentang</a></li>
-                <li><a href="#skill">Skill</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#journey">Pramuka</a></li>
+                <li><a href="#skill">Kemampuan</a></li>
+                <li><a href="#gallery">Galeri</a></li>
                 <li><a href="#contact">Kontak</a></li>
             </ul>
         </nav>
+
     </div>
+
 </header>
 
+<!-- HERO -->
+
 <section class="hero" id="home">
-    <div class="container hero-content">
-
-        <div class="hero-text">
-            <h3>Halo, Saya</h3>
-
-            <h1>JAYUSMAN</h1>
-
-            <p>
-                Seorang Web Developer yang berfokus pada pembuatan website modern,
-                responsif, cepat, dan profesional.
-            </p>
-
-            <a href="#portfolio" class="btn">
-                Lihat Portfolio
-            </a>
-
-        </div>
-
-        <div class="hero-image">
-            <img src="https://pelajarnu.programingcilegeh.my.id/uploads/avatar/avatar_8_1782762268.jpeg" alt="">
-        </div>
-
-    </div>
-</section>
-
-<section class="about" id="about">
 
 <div class="container">
 
-<h2>Tentang Saya</h2>
+<div class="hero-text">
+
+<h4>Hallo, Saya</h4>
+
+<h1>JAYUSMAN</h1>
+
+<h2>Pramuka Penegak Laksana</h2>
 
 <p>
-Saya adalah seorang web developer yang memiliki ketertarikan pada
-pengembangan website menggunakan HTML, CSS, JavaScript dan PHP.
-Saya senang membuat tampilan website yang elegan, cepat,
-dan mudah digunakan.
+
+"Menjadi seorang Pramuka bukan hanya tentang mengenakan seragam, tetapi
+tentang membangun karakter, menjunjung tinggi Tri Satya dan Dasa Dharma,
+serta siap mengabdi kepada agama, bangsa, negara, dan masyarakat."
+
+<br><br>
+
+Saya merupakan pelajar di
+<b>SMK Bangun Bangsa Mandiri Kandanghaur</b>
+yang memiliki semangat untuk terus belajar,
+berorganisasi, disiplin, bertanggung jawab,
+serta mengembangkan kemampuan diri melalui kegiatan kepramukaan.
+
+</p>
+
+<a href="#about" class="btn">
+Tentang Saya
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43c?w=800" alt="Profile">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="title">Tentang Saya</h2>
+
+<p class="subtitle">
+Mengenal lebih dekat tentang diri saya
+</p>
+
+<div class="glass">
+
+<div class="about-content">
+
+<div>
+
+<h2 style="margin-bottom:20px;color:#4cc9f0;">
+JAYUSMAN
+</h2>
+
+<p>
+
+Saya adalah seorang pelajar aktif di
+<b>SMK Bangun Bangsa Mandiri Kandanghaur</b>
+yang memiliki ketertarikan terhadap organisasi,
+kepemimpinan, dan pengembangan karakter.
+
+<br><br>
+
+Kepramukaan menjadi salah satu perjalanan hidup
+yang membentuk pribadi saya menjadi lebih disiplin,
+mandiri, bertanggung jawab, dan mampu bekerja sama
+dalam setiap keadaan.
+
+<br><br>
+
+Sebagai seorang
+<b>Pramuka Penegak Laksana</b>,
+saya percaya bahwa setiap tantangan merupakan kesempatan
+untuk belajar dan berkembang menjadi pribadi
+yang lebih baik.
+
 </p>
 
 </div>
 
-</section>
+<div>
 
-<section class="skill" id="skill">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900"
+style="width:100%;border-radius:20px;">
 
-<div class="container">
-
-<h2>Keahlian</h2>
-
-<div class="skill-box">
-
-<div class="card">
-<h3>HTML</h3>
-<p>Struktur Website Modern</p>
 </div>
 
-<div class="card">
-<h3>CSS</h3>
-<p>Responsive Design</p>
-</div>
-
-<div class="card">
-<h3>JavaScript</h3>
-<p>Interaktif Website</p>
-</div>
-
-<div class="card">
-<h3>PHP</h3>
-<p>Backend Development</p>
 </div>
 
 </div>
@@ -336,27 +816,100 @@ dan mudah digunakan.
 
 </section>
 
-<section class="portfolio" id="portfolio">
+<!-- TIMELINE -->
+
+<section id="journey">
 
 <div class="container">
 
-<h2>Portfolio</h2>
+<h2 class="title">
+Perjalanan Kepramukaan
+</h2>
 
-<div class="portfolio-box">
+<p class="subtitle">
+Proses pembelajaran dalam Gerakan Pramuka
+</p>
 
-<div class="project">
-<img src="<a href="https://i.postimg.cc/kGLQ1k2d/qr-code-(1).png">
-<h3>Website Sekolah</h3>
+<div class="timeline">
+
+<div class="item">
+
+<div class="icon">
+<i class="fas fa-seedling"></i>
 </div>
 
-<div class="project">
-<img src="https://picsum.photos/400/250?2">
-<h3>Aplikasi Bendahara</h3>
+<div>
+
+<h3>Siaga</h3>
+
+<p>
+Belajar kemandirian, keberanian, serta mengenal
+dasar-dasar kepramukaan.
+</p>
+
 </div>
 
-<div class="project">
-<img src="https://picsum.photos/400/250?3">
-<h3>Company Profile</h3>
+</div>
+
+<div class="item">
+
+<div class="icon">
+<i class="fas fa-users"></i>
+</div>
+
+<div>
+
+<h3>Penggalang</h3>
+
+<p>
+Belajar kerja sama, kepemimpinan,
+dan semangat gotong royong.
+</p>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="icon">
+<i class="fas fa-campground"></i>
+</div>
+
+<div>
+
+<h3>Penegak Bantara</h3>
+
+<p>
+Mengembangkan kemampuan organisasi,
+pengabdian serta tanggung jawab
+sebagai generasi muda.
+</p>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="icon">
+<i class="fas fa-award"></i>
+</div>
+
+<div>
+
+<h3>Penegak Laksana</h3>
+
+<p>
+
+Tahap yang mengajarkan kepemimpinan,
+pengabdian kepada masyarakat,
+serta menjadi teladan bagi sesama anggota Pramuka.
+
+</p>
+
+</div>
+
 </div>
 
 </div>
@@ -365,17 +918,177 @@ dan mudah digunakan.
 
 </section>
 
-<section class="contact" id="contact">
+<!-- SKILL -->
+
+<section id="skill">
 
 <div class="container">
 
-<h2>Kontak</h2>
+<h2 class="title">
+Kemampuan
+</h2>
 
-<p>Email : manjayus665@email.com</p>
+<p class="subtitle">
+Karakter yang terus saya kembangkan
+</p>
 
-<p>WhatsApp : +62 831-6608-1348</p>
+<div class="skills">
 
-<a href="#" class="btn">Hubungi Saya</a>
+<div class="skill-card">
+
+<h3>Leadership</h3>
+
+<div class="bar">
+<span style="width:95%"></span>
+</div>
+
+</div>
+
+<div class="skill-card">
+
+<h3>Disiplin</h3>
+
+<div class="bar">
+<span style="width:98%"></span>
+</div>
+
+</div>
+
+<div class="skill-card">
+
+<h3>Kerja Sama</h3>
+
+<div class="bar">
+<span style="width:96%"></span>
+</div>
+
+</div>
+
+<div class="skill-card">
+
+<h3>Tanggung Jawab</h3>
+
+<div class="bar">
+<span style="width:94%"></span>
+</div>
+
+</div>
+
+<div class="skill-card">
+
+<h3>Komunikasi</h3>
+
+<div class="bar">
+<span style="width:90%"></span>
+</div>
+
+</div>
+
+<div class="skill-card">
+
+<h3>Public Speaking</h3>
+
+<div class="bar">
+<span style="width:88%"></span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALERI -->
+
+<section id="gallery">
+
+<div class="container">
+
+<h2 class="title">
+Galeri
+</h2>
+
+<p class="subtitle">
+Beberapa dokumentasi kegiatan
+</p>
+
+<div class="gallery">
+
+<img src="https://picsum.photos/500/400?1">
+
+<img src="https://picsum.photos/500/400?2">
+
+<img src="https://picsum.photos/500/400?3">
+
+<img src="https://picsum.photos/500/400?4">
+
+<img src="https://picsum.photos/500/400?5">
+
+<img src="https://picsum.photos/500/400?6">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="title">
+Kontak
+</h2>
+
+<p class="subtitle">
+Mari terhubung
+</p>
+
+<div class="contact">
+
+<div class="card">
+
+<i class="fas fa-school"></i>
+
+<h3>Sekolah</h3>
+
+<p>
+SMK Bangun Bangsa Mandiri
+Kandanghaur
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-fleur-de-lis"></i>
+
+<h3>Organisasi</h3>
+
+<p>
+Gerakan Pramuka
+Penegak Laksana
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-envelope"></i>
+
+<h3>Email</h3>
+
+<p>
+jayusman@email.com
+</p>
+
+</div>
+
+</div>
 
 </div>
 
@@ -383,9 +1096,283 @@ dan mudah digunakan.
 
 <footer>
 
-<p>© 2026 <b>JAYUSMAN</b>. All Rights Reserved.</p>
+<p>
+
+© 2026 JAYUSMAN
+
+<br>
+
+Pramuka Penegak Laksana •
+SMK Bangun Bangsa Mandiri Kandanghaur
+
+</p>
 
 </footer>
+<!-- BACK TO TOP -->
+
+<button id="topBtn">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<style>
+
+/*============================*/
+/* BACK TO TOP */
+/*============================*/
+
+#topBtn{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:linear-gradient(45deg,#2563eb,#4cc9f0);
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+display:none;
+
+z-index:9999;
+
+box-shadow:0 0 25px rgba(76,201,240,.5);
+
+transition:.3s;
+
+}
+
+#topBtn:hover{
+
+transform:translateY(-6px) scale(1.08);
+
+box-shadow:0 0 45px rgba(76,201,240,.8);
+
+}
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+</style>
+
+<script>
+
+/*==============================*/
+/* Navbar Scroll */
+/*==============================*/
+
+const header=document.querySelector("header");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>60){
+
+header.style.background="rgba(2,6,23,.85)";
+
+header.style.backdropFilter="blur(18px)";
+
+header.style.boxShadow="0 10px 30px rgba(0,0,0,.4)";
+
+}else{
+
+header.style.background="rgba(255,255,255,.05)";
+
+header.style.boxShadow="none";
+
+}
+
+});
+
+/*==============================*/
+/* Back To Top */
+/*==============================*/
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>400){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+topBtn.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+/*==============================*/
+/* Reveal Animation */
+/*==============================*/
+
+const revealElements=document.querySelectorAll(
+
+"section,.glass,.skill-card,.item,.gallery img,.card"
+
+);
+
+revealElements.forEach(el=>{
+
+el.classList.add("reveal");
+
+});
+
+function reveal(){
+
+const reveals=document.querySelectorAll(".reveal");
+
+for(let i=0;i<reveals.length;i++){
+
+let windowHeight=window.innerHeight;
+
+let revealTop=reveals[i].getBoundingClientRect().top;
+
+let revealPoint=120;
+
+if(revealTop<windowHeight-revealPoint){
+
+reveals[i].classList.add("active");
+
+}
+
+}
+
+}
+
+window.addEventListener("scroll",reveal);
+
+reveal();
+
+/*==============================*/
+/* Active Menu */
+/*==============================*/
+
+const sections=document.querySelectorAll("section");
+
+const navLinks=document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const sectionTop=section.offsetTop-120;
+
+const sectionHeight=section.clientHeight;
+
+if(pageYOffset>=sectionTop){
+
+current=section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")==="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+/*==============================*/
+/* Smooth Hover */
+/*==============================*/
+
+document.querySelectorAll("nav a").forEach(link=>{
+
+link.addEventListener("mouseenter",()=>{
+
+link.style.transform="translateY(-2px)";
+
+});
+
+link.addEventListener("mouseleave",()=>{
+
+link.style.transform="translateY(0)";
+
+});
+
+});
+
+/*==============================*/
+/* Typing Effect */
+/*==============================*/
+
+const title=document.querySelector(".hero-text h2");
+
+const text=title.innerHTML;
+
+title.innerHTML="";
+
+let i=0;
+
+function typing(){
+
+if(i<text.length){
+
+title.innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(typing,70);
+
+}
+
+}
+
+typing();
+
+</script>
 
 </body>
 </html>
